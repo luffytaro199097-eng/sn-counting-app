@@ -1,0 +1,80 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+ <link rel="manifest" href="./manifest.json">
+  <meta name="theme-color" content="#1769aa">
+  <h1>SN Counter App</h1>
+
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      text-align: center;
+      background: #eaf4ff;
+      padding: 40px 15px;
+    }
+
+    .app {
+      background: white;
+      padding: 25px;
+      border-radius: 20px;
+      max-width: 320px;
+      margin: auto;
+    }
+
+    h1 {
+      color: #1769aa;
+    }
+
+    #count {
+      font-size: 50px;
+      font-weight: bold;
+    }
+
+    button {
+      font-size: 18px;
+      padding: 12px 20px;
+      border: none;
+      border-radius: 10px;
+      background: #1769aa;
+      color: white;
+      margin: 5px;
+    }
+    img {
+    width: 100px;
+    height: auto;
+      display: block;
+    margin: auto;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="app">
+    <img src="sn-logo.png" alt="SN Logo">
+    <h1>Counter App</h1>
+    <p>start Counting here!</p>
+
+    <div id="count">0</div>
+
+    <button onclick="resetCount()">Reset</button>
+    <button onclick="addOne()">Tap Me!</button>
+  </div>
+
+  <script>
+    let count = 0;
+
+    function addOne() {
+      count = count + 1;
+      document.getElementById("count").textContent = count;
+    }
+
+    function resetCount() {
+      count = 0;
+      document.getElementById("count").textContent = count;
+    }
+  </script>
+</body>
+</html>
